@@ -363,6 +363,8 @@ footer {
   .room-card { border-right: none; border-bottom: 1px solid var(--border); padding: 32px 20px; }
   .artists-grid { grid-template-columns: 1fr 1fr; }
   .artist-card:nth-child(2n) { border-right: none; }
+  .curator-section img { width: 120px !important; min-width: 120px !important; }
+  blockquote { font-size: clamp(1.2rem,4vw,1.8rem) !important; }
   .works-grid { grid-template-columns: 1fr 1fr; }
   .work-card:nth-child(2n) { border-right: none; }
   .about-section { grid-template-columns: 1fr; }
@@ -382,17 +384,9 @@ footer {
 
   /* === MOBILE PERFORMANCE === */
   img { max-width: 100%; height: auto; }
-  @media (max-width:600px) {
-    .curator-section img { width: 140px !important; }
-    blockquote { font-size: clamp(1.2rem,4vw,1.8rem) !important; }
-  }
 
 
-  @media (max-width:600px) {
-    .curator-section .curator-flex { flex-wrap: nowrap !important; gap: 16px !important; }
-    .curator-section img { width: 120px !important; min-width: 120px !important; }
-    .curator-section .curator-text { font-size: 13px !important; }
-  }
+
 
 </style>
 
