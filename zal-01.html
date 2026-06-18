@@ -217,14 +217,125 @@ footer a{color:var(--mid);text-decoration:none;}
     </div>
   </div>
   <div class="work-card">
-    <div class="work-image" style="background:#e8e8e8;display:flex;align-items:center;justify-content:center;">
-      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#999;">Изображение</div>
+    <div class="work-image">
+      <div class="work-ph">Работа<br>художника</div>
     </div>
     <div class="work-info">
       <div class="work-author">Лиля Баканова</div>
       <div class="work-title">Живопись</div>
-      <div class="work-medium">Живопись</div>
-      <p class="work-desc">Художественная практика с 2021 года. Работы на стыке абстракции и фигуративного.</p>
+      <div class="work-medium">Живопись · 2024</div>
+      <p class="work-desc">Пространство между абстракцией и фигурой — территория, где форма ищет своё имя.</p>
+    </div>
+  </div></div>
+
+<div id="quote-block" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px;display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:center;background:var(--white);">
+  <div>
+    <button onclick="showRandomQuote()" style="font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);background:none;border:none;border-bottom:1px solid var(--border);padding-bottom:2px;cursor:pointer;margin-bottom:20px;display:block;white-space:nowrap;">Другая цитата</button>
+    <div style="font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--mid);text-transform:uppercase;margin-bottom:8px;white-space:nowrap;">Прямая речь</div>
+    <p style="font-size:12px;font-weight:300;line-height:1.6;color:var(--mid);margin-bottom:16px;">Именно эти слова художников куратор передал искусственному интеллекту — и ИИ создал по ним изображения для выставки.</p>
+    <div style="font-family:var(--serif);font-size:clamp(3rem,5vw,5rem);font-weight:400;line-height:1;color:var(--gray);letter-spacing:-.02em;">&ldquo;&rdquo;</div>
+  </div>
+  <div>
+    <p id="quote-text" style="font-family:var(--serif);font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:400;font-style:italic;line-height:1.6;color:var(--black);margin-bottom:20px;"></p>
+    <div id="quote-author" style="font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);"></div>
+  </div>
+</div>
+<script>
+
+const quotes = [
+  { author: "Юлия Назар", text: "Я работаю с живописью как с полем процессов, а не изображений. Абстрактные работы фиксируют следы — остаточные проявления света, времени, погоды и внутренних состояний." },
+  { author: "Юлия Назар", text: "Реалистичная живопись — это не про изображение, а про удержание момента на грани исчезновения. Она фиксирует видимый мир как запись внимания, длительности и присутствия." },
+  { author: "Ирина Моторина", text: "Моя художественная практика сравни качелям, траектория движения которых захватывает и академическое видение, и стремление к экспериментам с новыми материалами и медиумами." },
+  { author: "Ирина Моторина", text: "В своих проектах я размышляю о месте человека в глобальной экосистеме — о том, как личное и вселенское существуют в одном пространстве восприятия." },
+  { author: "Павел Глазатов", text: "Хаос и порядок — не противоположности. Это два состояния одного материала, которые сосуществуют одновременно в любой замкнутой системе." },
+  { author: "Павел Глазатов", text: "Живое и неживое различаются не природой, а временем отклика. Я работаю с этой границей — с тем моментом, когда материал начинает отвечать." },
+  { author: "Екатерина Ус(ольцева)", text: "Знак существует до смысла. Каллиграфия — это язык, который воздействует раньше, чем ты успеваешь прочитать. Это и есть то, что меня интересует." },
+  { author: "Екатерина Ус(ольцева)", text: "Восток и Запад встречаются в точке, где письмо становится жестом. Я работаю именно в этой точке — до слова, до перевода." },
+  { author: "Надежда Белова", text: "Иконопись научила меня, что изображение может быть местом присутствия, а не просто поверхностью. Абстракция — это тот же поиск, только без фигуры." },
+  { author: "Надежда Белова", text: "Когда убираешь сюжет, остаётся самое главное — энергия, намерение, след. Именно это я пытаюсь сохранить в каждой работе." },
+  { author: "Светлана Дёмина", text: "Каждый слой краски — это время. Живопись для меня — это не создание образа, а накопление присутствия. Слой за слоем." },
+  { author: "Светлана Дёмина", text: "Я начинала с реализма и пришла к смешанным техникам — не потому что искала свободу, а потому что искала точность. Иногда нужны все языки сразу." },
+  { author: "Анастасия Кайнеанунг", text: "Античность для меня — не прошлое. Это незакрытый вопрос. Я возвращаюсь к архетипическим образам, потому что они ещё не дали ответа." },
+  { author: "Анастасия Кайнеанунг", text: "Живопись позволяет удерживать противоречие — древнее и сегодняшнее — не разрешая его. Я работаю в этом промежутке." },
+  { author: "Лиана Фролова", text: "Граница между реальным и воображаемым — это не место, это состояние. В нём я существую как художник." },
+  { author: "Лиана Фролова", text: "Визуальная мифология — это не выдумка. Это попытка назвать то, что уже есть, но ещё не имеет имени." },
+  { author: "Ева Кан", text: "Архитектура говорит до того, как в неё войдут люди. Я исследую этот момент — пространство как высказывание, предшествующее присутствию." },
+  { author: "Ева Кан", text: "Форма — это не решение задачи, это вопрос, поставленный в материале. Хорошая форма оставляет вопрос открытым." },
+  { author: "Лео Лев", text: "Органная музыка существует в пространстве так же, как скульптура. Она занимает объём, давит и освобождает. Звук — это тоже язык до слова." },
+  { author: "Лео Лев", text: "Музыка — единственный вид искусства, который нельзя остановить. В этой невозможности паузы и есть смысл." },
+  { author: "Елена Назарова", text: "Фотография — это след внимания. Не объект, не момент — именно внимание. То, на что ты смотришь достаточно долго, чтобы нажать кнопку." },
+  { author: "Елена Назарова", text: "Улица — это текст, который пишется без автора. Я читаю его через объектив и нахожу в нём слова, которых никто не планировал." },
+  { author: "Елена Асеева", text: "Иконопись — это язык, в котором каждая линия несёт значение, накопленное веками. Я работаю с этим языком как с живым, а не как с архивом." },
+  { author: "Елена Асеева", text: "Искусствоведение научило меня видеть за образом систему. Практика научила меня видеть за системой — живой нерв." }
+];
+
+function showRandomQuote() {
+  const q = quotes[Math.floor(Math.random() * quotes.length)];
+  document.getElementById('quote-text').textContent = '«' + q.text + '»';
+  document.getElementById('quote-author').textContent = '— ' + q.author;
+}
+showRandomQuote();
+
+</script>
+
+
+<div style="display:grid;grid-template-columns:1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border);width:100%;">
+  <div style="padding:64px 56px;border-right:1px solid var(--border);">
+    <div style="font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--mid);text-transform:uppercase;margin-bottom:2rem;">О выставке</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;line-height:1.1;margin-bottom:1.5rem;">Язык<br>до <em>слова</em></h2>
+    <p style="font-size:14px;font-weight:300;line-height:1.8;color:#444;margin-bottom:2rem;">До того как возникло слово — был жест, линия, след руки в глине, знак на камне. Этот язык не исчез. Он живёт в каждом произведении, которое нельзя пересказать.</p>
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--black);text-decoration:none;padding-bottom:2px;border-bottom:1px solid var(--black);">На главную страницу выставки &rarr;</a>
+  </div>
+  <div style="padding:64px 56px;background:var(--gray);display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="padding-left:32px;">
+      <div style="font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--mid);text-transform:uppercase;margin-bottom:1.5rem;">Залы выставки</div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <a href="zal-01.html" style="font-size:15px;font-weight:300;font-family:var(--serif);color:var(--black);text-decoration:none;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:10px;">
+          <span>Зал 01 · <em>Ритуал</em></span><span style="font-size:16px;color:var(--black);font-weight:500;">→</span>
+        </a>
+        <a href="zal-02.html" style="font-size:15px;font-weight:300;font-family:var(--serif);color:var(--black);text-decoration:none;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:10px;">
+          <span>Зал 02 · <em>Миф</em></span><span style="font-size:16px;color:var(--black);font-weight:500;">→</span>
+        </a>
+        <a href="zal-03.html" style="font-size:15px;font-weight:300;font-family:var(--serif);color:var(--black);text-decoration:none;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:10px;">
+          <span>Зал 03 · <em>Материя</em></span><span style="font-size:16px;color:var(--black);font-weight:500;">→</span>
+        </a>
+      </div>
+    </div>
+    <div style="margin-top:2rem;padding-left:32px;">
+      <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;">16 резидентов Глубины</div>
+      <div style="font-size:11px;color:var(--mid);">Глубина · Москва · Июнь 2026</div>
     </div>
   </div>
 </div>
+
+<div style="background:var(--gray);border-top:1px solid var(--border);width:100%;box-sizing:border-box;">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;padding:16px 56px 16px 56px;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:6px;">
+    <h2 style="font-size:13px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;margin:0;">Контакты для резидентов, галерей и коллекционеров</h2>
+    <span style="font-size:12px;color:var(--mid);white-space:nowrap;margin-left:2rem;">Глубина · Москва · Июнь 2026</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);background:var(--white);width:100%;">
+    <div style="padding:16px 16px 16px 56px;border-right:1px solid var(--border);word-break:break-word;min-width:0;">
+      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;">Адрес</div>
+      <div style="font-size:13px;line-height:1.8;">Москва, Фрунзенская набережная, д. 46<br>3-й подъезд</div>
+    </div>
+    <div style="padding:16px;border-right:1px solid var(--border);word-break:break-word;min-width:0;">
+      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;">Стать резидентом</div>
+      <div style="font-size:13px;line-height:1.8;">Глубина открыта для новых резидентов.<br>Портфолио на <a href="mailto:gallery@glubinagallery.ru" style="color:var(--black);">gallery@glubinagallery.ru</a></div>
+    </div>
+    <div style="padding:16px 16px 16px 56px;border-right:1px solid var(--border);word-break:break-word;min-width:0;">
+      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;">Приобретение работ</div>
+      <div style="font-size:13px;line-height:1.8;"><a href="mailto:nazarov.bruni@gmail.com" style="color:var(--black);">nazarov.bruni@gmail.com</a><br><a href="https://t.me/NazarovBruni" target="_blank" style="color:var(--black);">@NazarovBruni</a></div>
+    </div>
+    <div style="padding:16px;word-break:break-word;min-width:0;">
+      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;">Соцсети</div>
+      <div style="font-size:13px;line-height:1.8;"><a href="https://t.me/galleryglubina" target="_blank" style="color:var(--black);">Telegram</a><br><a href="https://vk.com/club212774474" target="_blank" style="color:var(--black);">ВКонтакте</a></div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 56px;background:var(--gray);border-top:1px solid var(--border);flex-wrap:wrap;gap:6px;">
+    <span style="font-size:11px;color:var(--mid);">&copy; 2026 Арт-сообщество Глубина &mdash; Концепция выставки: <a href="https://t.me/NazarovBruni" target="_blank" style="color:var(--mid);">Олег Назаров Бруни</a></span>
+    <a href="http://galleryglubina.ru" target="_blank" style="font-size:11px;color:var(--mid);text-decoration:none;">galleryglubina.ru</a>
+  </div>
+</div>
+
+</body>
+</html>
