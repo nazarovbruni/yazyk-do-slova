@@ -21,24 +21,24 @@
 html{scroll-behavior:smooth;}
 body{background:var(--white);color:var(--black);font-family:var(--sans);overflow-x:hidden;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:stretch;height:52px;background:var(--white);border-bottom:1px solid var(--border);}
-.nav-logo{display:flex;align-items:center;padding:0 24px;font-size:13px;font-weight:500;color:var(--black);text-decoration:none;border-right:1px solid var(--border);white-space:nowrap;}
-.nav-back{display:flex;align-items:center;padding:0 24px;font-size:12px;color:var(--mid);text-decoration:none;border-right:1px solid var(--border);transition:background .15s;}
+.nav-logo{display:flex;align-items:center;padding:0 24px;font-size:15px;font-weight:500;color:var(--black);text-decoration:none;border-right:1px solid var(--border);white-space:nowrap;}
+.nav-back{display:flex;align-items:center;padding:0 24px;font-size:14px;color:var(--mid);text-decoration:none;border-right:1px solid var(--border);transition:background .15s;}
 .nav-back:hover{background:var(--gray);}
-.nav-right{display:flex;align-items:center;padding:0 24px;font-size:12px;color:var(--mid);border-left:1px solid var(--border);margin-left:auto;white-space:nowrap;}
+.nav-right{display:flex;align-items:center;padding:0 24px;font-size:14px;color:var(--mid);border-left:1px solid var(--border);margin-left:auto;white-space:nowrap;}
 
 .zal-hero{margin-top:52px;padding:56px 56px 48px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;}
 .zal-num{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:16px;}
 .zal-title{font-family:var(--serif);font-size:clamp(3rem,6vw,6rem);font-weight:400;line-height:.95;letter-spacing:-.02em;}
 .zal-title em{font-style:italic;}
-.zal-desc{font-size:15px;font-weight:300;line-height:1.75;color:#444;max-width:480px;}
+.zal-desc{font-size:17px;font-weight:300;line-height:1.75;color:#444;max-width:480px;}
 .zal-artists-strip{display:flex;flex-direction:column;gap:6px;margin-top:20px;padding-top:20px;border-top:1px solid var(--border);}
-.zal-artist-row{font-size:13px;display:flex;align-items:baseline;gap:10px;}
+.zal-artist-row{font-size:15px;display:flex;align-items:baseline;gap:10px;}
 .zal-artist-name{font-weight:500;}
 .zal-artist-med{font-size:11px;color:var(--mid);letter-spacing:.04em;}
 
 .works-header{display:flex;align-items:baseline;justify-content:space-between;padding:32px 56px;border-bottom:1px solid var(--border);}
-.works-header h2{font-size:13px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;}
-.works-header span{font-size:12px;color:var(--mid);}
+.works-header h2{font-size:15px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;}
+.works-header span{font-size:14px;color:var(--mid);}
 
 .works-grid{display:grid;grid-template-columns:repeat(3,1fr);}
 .work-card{border-right:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;flex-direction:column;}
@@ -50,7 +50,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:str
 .work-author{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;}
 .work-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;margin-bottom:8px;line-height:1.2;}
 .work-medium{font-size:11px;color:var(--mid);letter-spacing:.04em;margin-bottom:10px;}
-.work-desc{font-size:13px;font-weight:300;line-height:1.65;color:#444;}
+.work-desc{font-size:15px;font-weight:300;line-height:1.65;color:#444;}
 
 footer{display:flex;align-items:center;justify-content:space-between;padding:20px 56px;border-top:1px solid var(--border);font-size:11px;color:var(--mid);}
 footer a{color:var(--mid);text-decoration:none;}
@@ -266,12 +266,12 @@ footer a{color:var(--mid);text-decoration:none;}
   <div>
     <button onclick="showRandomQuote()" style="font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);background:none;border:none;border-bottom:1px solid var(--border);padding-bottom:2px;cursor:pointer;margin-bottom:20px;display:block;white-space:nowrap;">Другая цитата</button>
     <div style="font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--mid);text-transform:uppercase;margin-bottom:8px;white-space:nowrap;">Прямая речь</div>
-    <p style="font-size:12px;font-weight:300;line-height:1.6;color:var(--mid);margin-bottom:16px;">Именно эти слова художников куратор передал искусственному интеллекту — и ИИ создал по ним изображения для выставки.</p>
+    <p style="font-size:14px;font-weight:300;line-height:1.6;color:var(--mid);margin-bottom:16px;">Именно эти слова художников куратор передал искусственному интеллекту — и ИИ создал по ним изображения для выставки.</p>
     <div style="font-family:var(--serif);font-size:clamp(3rem,5vw,5rem);font-weight:400;line-height:1;color:var(--gray);letter-spacing:-.02em;">&ldquo;&rdquo;</div>
   </div>
   <div>
     <p id="quote-text" style="font-family:var(--serif);font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:400;font-style:italic;line-height:1.6;color:var(--black);margin-bottom:20px;"></p>
-    <div id="quote-author" style="font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);"></div>
+    <div id="quote-author" style="font-size:14px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);"></div>
   </div>
 </div>
 <script>
@@ -319,21 +319,21 @@ showRandomQuote();
   <div style="padding:64px 56px;border-right:1px solid var(--border);">
     <div style="font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--mid);text-transform:uppercase;margin-bottom:2rem;">О выставке</div>
     <h2 style="font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;line-height:1.1;margin-bottom:1.5rem;">Язык<br>до <em>слова</em></h2>
-    <p style="font-size:14px;font-weight:300;line-height:1.8;color:#444;margin-bottom:2rem;">До того как возникло слово — был жест, линия, след руки в глине, знак на камне. Этот язык не исчез. Он живёт в каждом произведении, которое нельзя пересказать.</p>
-    <a href="index.html" style="display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--black);text-decoration:none;padding-bottom:2px;border-bottom:1px solid var(--black);">На главную страницу выставки &rarr;</a>
+    <p style="font-size:16px;font-weight:300;line-height:1.8;color:#444;margin-bottom:2rem;">До того как возникло слово — был жест, линия, след руки в глине, знак на камне. Этот язык не исчез. Он живёт в каждом произведении, которое нельзя пересказать.</p>
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--black);text-decoration:none;padding-bottom:2px;border-bottom:1px solid var(--black);">На главную страницу выставки &rarr;</a>
   </div>
   <div style="padding:64px 56px;background:var(--gray);display:flex;flex-direction:column;justify-content:space-between;">
     <div style="padding-left:32px;">
       <div style="font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--mid);text-transform:uppercase;margin-bottom:1.5rem;">Залы выставки</div>
       <div style="display:flex;flex-direction:column;gap:16px;">
-        <a href="zal-01.html" style="font-size:15px;font-weight:300;font-family:var(--serif);color:var(--black);text-decoration:none;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:10px;">
-          <span>Зал 01 · <em>Ритуал</em></span><span style="font-size:16px;color:var(--black);font-weight:500;">→</span>
+        <a href="zal-01.html" style="font-size:17px;font-weight:300;font-family:var(--serif);color:var(--black);text-decoration:none;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:10px;">
+          <span>Зал 01 · <em>Ритуал</em></span><span style="font-size:18px;color:var(--black);font-weight:500;">→</span>
         </a>
-        <a href="zal-02.html" style="font-size:15px;font-weight:300;font-family:var(--serif);color:var(--black);text-decoration:none;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:10px;">
-          <span>Зал 02 · <em>Миф</em></span><span style="font-size:16px;color:var(--black);font-weight:500;">→</span>
+        <a href="zal-02.html" style="font-size:17px;font-weight:300;font-family:var(--serif);color:var(--black);text-decoration:none;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:10px;">
+          <span>Зал 02 · <em>Миф</em></span><span style="font-size:18px;color:var(--black);font-weight:500;">→</span>
         </a>
-        <a href="zal-03.html" style="font-size:15px;font-weight:300;font-family:var(--serif);color:var(--black);text-decoration:none;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:10px;">
-          <span>Зал 03 · <em>Материя</em></span><span style="font-size:16px;color:var(--black);font-weight:500;">→</span>
+        <a href="zal-03.html" style="font-size:17px;font-weight:300;font-family:var(--serif);color:var(--black);text-decoration:none;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:10px;">
+          <span>Зал 03 · <em>Материя</em></span><span style="font-size:18px;color:var(--black);font-weight:500;">→</span>
         </a>
       </div>
     </div>
@@ -346,25 +346,25 @@ showRandomQuote();
 
 <div style="background:var(--gray);border-top:1px solid var(--border);width:100%;box-sizing:border-box;">
   <div style="display:flex;align-items:baseline;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:6px;">
-    <h2 style="font-size:13px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;margin:0;">Контакты для резидентов, галерей и коллекционеров</h2>
-    <span style="font-size:12px;color:var(--mid);white-space:nowrap;margin-left:2rem;">Глубина · Москва · Июнь 2026</span>
+    <h2 style="font-size:15px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;margin:0;">Контакты для резидентов, галерей и коллекционеров</h2>
+    <span style="font-size:14px;color:var(--mid);white-space:nowrap;margin-left:2rem;">Глубина · Москва · Июнь 2026</span>
   </div>
   <div class="contacts-mobile-grid" style="display:grid;grid-template-columns:repeat(2,1fr);background:var(--white);width:100%;">
     <div style="padding:16px 16px 16px 88px;border-right:1px solid var(--border);word-break:break-word;min-width:0;">
       <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;">Адрес</div>
-      <div style="font-size:13px;line-height:1.8;">Москва, Фрунзенская набережная, д. 46<br>3-й подъезд</div>
+      <div style="font-size:15px;line-height:1.8;">Москва, Фрунзенская набережная, д. 46<br>3-й подъезд</div>
     </div>
     <div style="padding:16px 16px 16px 88px;border-right:1px solid var(--border);word-break:break-word;min-width:0;">
       <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;">Стать резидентом</div>
-      <div style="font-size:13px;line-height:1.8;">Глубина открыта для новых резидентов.<br>Портфолио на <a href="mailto:gallery@glubinagallery.ru" style="color:var(--black);">gallery@glubinagallery.ru</a></div>
+      <div style="font-size:15px;line-height:1.8;">Глубина открыта для новых резидентов.<br>Портфолио на <a href="mailto:gallery@glubinagallery.ru" style="color:var(--black);">gallery@glubinagallery.ru</a></div>
     </div>
     <div style="padding:16px 16px 16px 88px;border-right:1px solid var(--border);word-break:break-word;min-width:0;">
       <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;">Приобретение работ</div>
-      <div style="font-size:13px;line-height:1.8;"><a href="mailto:nazarov.bruni@gmail.com" style="color:var(--black);">nazarov.bruni@gmail.com</a><br><a href="https://t.me/NazarovBruni" target="_blank" style="color:var(--black);">@NazarovBruni</a></div>
+      <div style="font-size:15px;line-height:1.8;"><a href="mailto:nazarov.bruni@gmail.com" style="color:var(--black);">nazarov.bruni@gmail.com</a><br><a href="https://t.me/NazarovBruni" target="_blank" style="color:var(--black);">@NazarovBruni</a></div>
     </div>
     <div style="padding:16px 16px 16px 88px;word-break:break-word;min-width:0;">
       <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;">Соцсети</div>
-      <div style="font-size:13px;line-height:1.8;"><a href="https://t.me/galleryglubina" target="_blank" style="color:var(--black);">Telegram</a><br><a href="https://vk.com/club212774474" target="_blank" style="color:var(--black);">ВКонтакте</a></div>
+      <div style="font-size:15px;line-height:1.8;"><a href="https://t.me/galleryglubina" target="_blank" style="color:var(--black);">Telegram</a><br><a href="https://vk.com/club212774474" target="_blank" style="color:var(--black);">ВКонтакте</a></div>
     </div>
   </div>
   <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 56px;background:var(--gray);border-top:1px solid var(--border);flex-wrap:wrap;gap:6px;">
