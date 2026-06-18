@@ -369,8 +369,10 @@ footer {
   .nav-link { flex-shrink: 0; font-size: 10px; padding: 0 12px; height: 44px; white-space: nowrap; }
   .nav-right { display: none; }
   .hero { grid-template-columns: 1fr; }
-  .hero-left { padding: 24px 20px 36px; order: 2; }
-  .hero-desc { font-size: 16px; line-height: 1.55; max-width: 100%; margin-bottom: 20px; }
+  .hero { height: auto !important; max-height: none !important; overflow: visible !important; }
+  .hero-left { padding: 24px 20px 48px; order: 2; overflow: visible !important; }
+  .hero-title-block { margin: 20px 0 20px; }
+  .hero-desc { font-size: 17px; font-weight: 400; color: #111; line-height: 1.55; max-width: 100%; margin-bottom: 0; }
   .hero-right { min-height: 60vw; order: 1; }
   .section-header { padding: 20px; flex-wrap: wrap; gap: 4px; }
   .press-wrap { grid-template-columns: 1fr; }
