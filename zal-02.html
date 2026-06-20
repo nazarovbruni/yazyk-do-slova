@@ -208,10 +208,12 @@ const quotes = [
   { author: "Баринова Татьяна", text: "Почувствуй пропорцию. Обрети гармонию." }
 ];
 
+let quoteIndex = Math.floor(Math.random() * quotes.length);
 function showRandomQuote() {
-  const q = quotes[Math.floor(Math.random() * quotes.length)];
+  const q = quotes[quoteIndex];
   document.getElementById('quote-text').textContent = '«' + q.text + '»';
   document.getElementById('quote-author').textContent = '— ' + q.author;
+  quoteIndex = (quoteIndex + 1) % quotes.length;
 }
 showRandomQuote();
 
