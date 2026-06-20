@@ -44,7 +44,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:str
 .works-header span{font-size:14px;color:var(--mid);}
 
 .works-grid{display:grid;grid-template-columns:repeat(3,1fr);}
-.work-card{border-right:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;flex-direction:column;}
+.work-card{border-right:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;flex-direction:column;min-width:0;overflow:hidden;}
 .work-card:nth-child(3n){border-right:none;}
 .section-header{display:flex;align-items:baseline;justify-content:space-between;padding:32px 56px;border-bottom:1px solid var(--border);border-top:1px solid var(--border);}
 .section-header h2{font-size:15px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;}
@@ -52,7 +52,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:str
 .work-image{aspect-ratio:4/5;background:var(--gray);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);}
 .work-image img{width:100%;height:100%;object-fit:cover;display:block;}
 .work-ph{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);text-align:center;line-height:2;padding:20px;}
-.work-info{padding:20px 20px 28px;}
+.work-info{padding:20px 20px 28px;overflow-wrap:break-word;word-break:break-word;min-width:0;}
 .work-author{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;}
 .work-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;margin-bottom:8px;line-height:1.2;}
 .work-medium{font-size:11px;color:var(--mid);letter-spacing:.04em;margin-bottom:10px;}
@@ -67,8 +67,9 @@ footer a{color:var(--mid);text-decoration:none;}
   .works-grid{grid-template-columns:1fr 1fr;}
   .work-card:nth-child(3n){border-right:1px solid var(--border);}
   .work-card:nth-child(2n){border-right:none;}
-  .mobile-rooms-card{display:flex !important;flex-direction:column;}
-  .bottom-rooms-nav{display:none !important;}
+  .work-image{aspect-ratio:unset !important;height:260px !important;}
+  .nav-rooms-card a{font-size:15px !important;gap:6px !important;}
+  .nav-rooms-card a span{font-size:18px !important;}
   footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}
 }
 
