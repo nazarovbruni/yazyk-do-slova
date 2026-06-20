@@ -222,10 +222,12 @@ const quotes = [
   { author: "Александра Гордеева", text: "Абсолютная идея, воплощаясь в творениях художника, передаётся от человека человечеству. Задача зрителя — увидеть за формой замысел Творца." }
 ];
 
+let quoteIndex = Math.floor(Math.random() * quotes.length);
 function showRandomQuote() {
-  const q = quotes[Math.floor(Math.random() * quotes.length)];
+  const q = quotes[quoteIndex];
   document.getElementById('quote-text').textContent = '«' + q.text + '»';
   document.getElementById('quote-author').textContent = '— ' + q.author;
+  quoteIndex = (quoteIndex + 1) % quotes.length;
 }
 showRandomQuote();
 
