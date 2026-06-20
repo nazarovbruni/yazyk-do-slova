@@ -658,10 +658,12 @@ const mainQuotes = [
   { author: "Олеся Яценко", text: "«Фрагменты восприятия» — мой диалог с классическим натюрмортом. Я не копирую предметы, а собираю их заново через грани и плоскости." },
   { author: "Александра Гордеева", text: "Абсолютная идея, воплощаясь в творениях художника, передаётся от человека человечеству. Задача зрителя — увидеть за формой замысел Творца." }
 ];
+let mainQuoteIndex = Math.floor(Math.random() * mainQuotes.length);
 function showMainQuote() {
-  const q = mainQuotes[Math.floor(Math.random() * mainQuotes.length)];
+  const q = mainQuotes[mainQuoteIndex];
   document.getElementById('main-quote-text').textContent = '«' + q.text + '»';
   document.getElementById('main-quote-author').textContent = '— ' + q.author;
+  mainQuoteIndex = (mainQuoteIndex + 1) % mainQuotes.length;
 }
 showMainQuote();
 </script>
