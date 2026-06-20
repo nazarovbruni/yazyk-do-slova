@@ -61,6 +61,8 @@ footer a{color:var(--mid);text-decoration:none;}
   .works-grid{grid-template-columns:1fr 1fr;}
   .work-card:nth-child(3n){border-right:1px solid var(--border);}
   .work-card:nth-child(2n){border-right:none;}
+  .mobile-rooms-card{display:flex !important;flex-direction:column;}
+  .bottom-rooms-nav{display:none !important;}
   footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}
 }
 
@@ -178,6 +180,17 @@ footer a{color:var(--mid);text-decoration:none;}
       <p class="work-desc">«Сначала сделать, потом подумать.»</p>
     </div>
   </div>
+  <div class="work-card mobile-rooms-card" style="display:none;">
+    <div class="work-image" style="background:var(--gray);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:20px;gap:10px;">
+      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;">Залы выставки</div>
+      <a href="zal-01.html" style="font-size:14px;font-family:var(--serif);color:var(--black);text-decoration:none;display:flex;align-items:baseline;gap:6px;">Зал 01 · <em>Ритуал</em> <span style="font-size:14px;">→</span></a>
+      <a href="zal-02.html" style="font-size:14px;font-family:var(--serif);color:var(--black);text-decoration:none;display:flex;align-items:baseline;gap:6px;">Зал 02 · <em>Миф</em> <span style="font-size:14px;">→</span></a>
+      <a href="zal-03.html" style="font-size:14px;font-family:var(--serif);color:var(--black);text-decoration:none;display:flex;align-items:baseline;gap:6px;">Зал 03 · <em>Материя</em> <span style="font-size:14px;">→</span></a>
+    </div>
+    <div class="work-info">
+      <div class="work-author">&nbsp;</div>
+    </div>
+  </div>
 </div>
 
 <div id="quote-block" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px;display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:center;background:var(--white);">
@@ -221,7 +234,7 @@ showRandomQuote();
     <p style="font-size:16px;font-weight:300;line-height:1.8;color:#444;margin-bottom:2rem;">До того как возникло слово — был жест, линия, след руки в глине, знак на камне. Этот язык не исчез. Он живёт в каждом произведении, которое нельзя пересказать.</p>
     <a href="index.html" style="display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--black);text-decoration:none;padding-bottom:2px;border-bottom:1px solid var(--black);">На главную страницу выставки &rarr;</a>
   </div>
-  <div style="padding:64px 56px;background:var(--gray);display:flex;flex-direction:column;justify-content:space-between;">
+  <div class="bottom-rooms-nav" style="padding:64px 56px;background:var(--gray);display:flex;flex-direction:column;justify-content:space-between;">
     <div style="padding-left:32px;">
       <div style="font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--mid);text-transform:uppercase;margin-bottom:1.5rem;">Залы выставки</div>
       <div style="display:flex;flex-direction:column;gap:16px;">
