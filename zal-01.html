@@ -202,10 +202,12 @@ const quotes = [
   { author: "Баканова Лиля", text: "Всё связано. Я исследую связи между материей, энергией и сознанием — соединяю живопись, текстиль и ручное прядение." }
 ];
 
+let quoteIndex = Math.floor(Math.random() * quotes.length);
 function showRandomQuote() {
-  const q = quotes[Math.floor(Math.random() * quotes.length)];
+  const q = quotes[quoteIndex];
   document.getElementById('quote-text').textContent = '«' + q.text + '»';
   document.getElementById('quote-author').textContent = '— ' + q.author;
+  quoteIndex = (quoteIndex + 1) % quotes.length;
 }
 showRandomQuote();
 
