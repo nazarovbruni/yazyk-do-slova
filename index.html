@@ -570,7 +570,10 @@ footer {
 </section>
 
 <!-- PRESS RELEASE -->
-<div id="press"></div>
+<div class="section-header fade-in" id="press">
+  <h2>Концепция</h2>
+  <span>Глубина · Москва · Июнь 2026</span>
+</div>
 <div class="press-wrap fade-in">
   <div class="press-aside">
     <div>
@@ -596,10 +599,6 @@ footer {
     </div>
   </div>
   <div class="press-body">
-    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border);">
-      <h2 style="font-size:15px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;">Концепция</h2>
-      <span style="font-size:14px;color:var(--mid);">Глубина · Москва · Июнь 2026</span>
-    </div>
     <p>До слова был жест. Линия. След руки на камне. Человек всегда находил способ высказаться раньше, чем появлялись точные формулировки — через материал, движение, присутствие. Этот язык никуда не делся. Он живёт в искусстве до сих пор.</p>
 
     <p>«Язык до слова» — выставка шестнадцати художников арт-сообщества Glubina о том пространстве, где смысл уже есть, но его ещё невозможно объяснить. Когда слова становятся слишком узкими — остаётся образ. Он не рассказывает напрямую, но действует точнее текста.</p>
@@ -615,6 +614,51 @@ footer {
     <p>«Язык до слова» — виртуальная выставка, открытая зрителю вне зависимости от географии. Это выставка о тишине, в которой смысл уже звучит — но ещё не стал речью.</p>
   </div>
 </div>
+
+<!-- QUOTES -->
+<div id="main-quote-block" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px;display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:center;background:var(--white);">
+  <div>
+    <button onclick="showMainQuote()" style="font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);background:none;border:none;border-bottom:1px solid var(--border);padding-bottom:2px;cursor:pointer;margin-bottom:20px;display:block;white-space:nowrap;">Другая цитата</button>
+    <div style="font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--mid);text-transform:uppercase;margin-bottom:8px;white-space:nowrap;">Прямая речь</div>
+    <p style="font-size:14px;font-weight:300;line-height:1.6;color:var(--mid);margin-bottom:16px;">Именно эти слова художников куратор передал искусственному интеллекту — и ИИ создал по ним изображения для выставки.</p>
+    <div style="font-family:var(--serif);font-size:clamp(3rem,5vw,5rem);font-weight:400;line-height:1;color:var(--gray);letter-spacing:-.02em;">&ldquo;&rdquo;</div>
+  </div>
+  <div>
+    <p id="main-quote-text" style="font-family:var(--serif);font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:400;font-style:italic;line-height:1.6;color:var(--black);margin-bottom:20px;"></p>
+    <div id="main-quote-author" style="font-size:14px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);"></div>
+  </div>
+</div>
+<script>
+const mainQuotes = [
+  { author: "Екатерина Ус(ольцева)", text: "Знак существует до смысла. Каллиграфия — это язык, который воздействует раньше, чем ты успеваешь прочитать. Это и есть то, что меня интересует." },
+  { author: "Екатерина Ус(ольцева)", text: "Восток и Запад встречаются в точке, где письмо становится жестом. Я работаю именно в этой точке — до слова, до перевода." },
+  { author: "Надежда Белова", text: "Искренне работаю абстрактно. Экспериментируя, ищу метафору, которую создаёт случайность и сам материал." },
+  { author: "Надежда Белова", text: "Случайность и материал — мои соавторы. Я ищу не образ, а метафору, которая возникает сама." },
+  { author: "Светлана Дёмина", text: "Каждый слой краски — это время. Живопись для меня — это не создание образа, а накопление присутствия. Слой за слоем." },
+  { author: "Павел Глазатов", text: "Хаос и порядок — не противоположности. Это два состояния одного материала, которые сосуществуют одновременно в любой замкнутой системе." },
+  { author: "Павел Глазатов", text: "Живое и неживое различаются не природой, а временем отклика. Я работаю с этой границей — с тем моментом, когда материал начинает отвечать." },
+  { author: "Анастасия Кайнеанунг", text: "Античность для меня — не прошлое. Это незакрытый вопрос. Я возвращаюсь к архетипическим образам, потому что они ещё не дали ответа." },
+  { author: "Лиана Фролова", text: "Граница между реальным и воображаемым — это не место, это состояние. В нём я существую как художник." },
+  { author: "Ева Кан", text: "Архитектура говорит до того, как в неё войдут люди. Я исследую этот момент — пространство как высказывание, предшествующее присутствию." },
+  { author: "Юлия Назар", text: "Абстрактные работы фиксируют следы — остаточные проявления света, времени, погоды и внутренних состояний." },
+  { author: "Елена Назарова", text: "Улица — это текст без автора. Я читаю его через объектив." },
+  { author: "Елена Асеева", text: "Я пишу стихи, потом беру квинтэссенцию из текста, погружаюсь в растительное состояние и рисую не мысль — а энергию. Больше чем мысль. Анти-мысль." },
+  { author: "Лео Лев", text: "Органная музыка существует в пространстве так же, как скульптура. Она занимает объём, давит и освобождает. Звук — это тоже язык до слова." },
+  { author: "Ирина Моторина", text: "В своих проектах я размышляю о месте человека в глобальной экосистеме — о том, как личное и вселенское существуют в одном пространстве восприятия." },
+  { author: "Олеся Яценко", text: "«Фрагменты восприятия» — мой диалог с классическим натюрмортом. Я не копирую предметы, а собираю их заново — через грани, плоскости, вспышки оранжевого." },
+  { author: "Олеся Яценко", text: "Живопись может быть не зеркалом, а призмой. Она учит видеть привычное иначе — дробным, подвижным, живым." },
+  { author: "Александра Гордеева", text: "Абсолютная идея, воплощаясь в творениях художника в виде формы, передаётся от человека человечеству." },
+  { author: "Александра Гордеева", text: "Задача зрителя — за формой увидеть истинный замысел и послание от Творца." }
+];
+function showMainQuote() {
+  const q = mainQuotes[Math.floor(Math.random() * mainQuotes.length)];
+  document.getElementById('main-quote-text').textContent = '«' + q.text + '»';
+  document.getElementById('main-quote-author').textContent = '— ' + q.author;
+}
+showMainQuote();
+</script>
+
+
 
 <!-- ROOMS -->
 <div class="section-header fade-in" id="rooms" style="background:var(--gray);">
@@ -850,49 +894,6 @@ footer {
 
 </div>
 
-
-<!-- QUOTES -->
-<div id="main-quote-block" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px;display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:center;background:var(--white);">
-  <div>
-    <button onclick="showMainQuote()" style="font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);background:none;border:none;border-bottom:1px solid var(--border);padding-bottom:2px;cursor:pointer;margin-bottom:20px;display:block;white-space:nowrap;">Другая цитата</button>
-    <div style="font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--mid);text-transform:uppercase;margin-bottom:8px;white-space:nowrap;">Прямая речь</div>
-    <p style="font-size:14px;font-weight:300;line-height:1.6;color:var(--mid);margin-bottom:16px;">Именно эти слова художников куратор передал искусственному интеллекту — и ИИ создал по ним изображения для выставки.</p>
-    <div style="font-family:var(--serif);font-size:clamp(3rem,5vw,5rem);font-weight:400;line-height:1;color:var(--gray);letter-spacing:-.02em;">&ldquo;&rdquo;</div>
-  </div>
-  <div>
-    <p id="main-quote-text" style="font-family:var(--serif);font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:400;font-style:italic;line-height:1.6;color:var(--black);margin-bottom:20px;"></p>
-    <div id="main-quote-author" style="font-size:14px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);"></div>
-  </div>
-</div>
-<script>
-const mainQuotes = [
-  { author: "Екатерина Ус(ольцева)", text: "Знак существует до смысла. Каллиграфия — это язык, который воздействует раньше, чем ты успеваешь прочитать. Это и есть то, что меня интересует." },
-  { author: "Екатерина Ус(ольцева)", text: "Восток и Запад встречаются в точке, где письмо становится жестом. Я работаю именно в этой точке — до слова, до перевода." },
-  { author: "Надежда Белова", text: "Искренне работаю абстрактно. Экспериментируя, ищу метафору, которую создаёт случайность и сам материал." },
-  { author: "Надежда Белова", text: "Случайность и материал — мои соавторы. Я ищу не образ, а метафору, которая возникает сама." },
-  { author: "Светлана Дёмина", text: "Каждый слой краски — это время. Живопись для меня — это не создание образа, а накопление присутствия. Слой за слоем." },
-  { author: "Павел Глазатов", text: "Хаос и порядок — не противоположности. Это два состояния одного материала, которые сосуществуют одновременно в любой замкнутой системе." },
-  { author: "Павел Глазатов", text: "Живое и неживое различаются не природой, а временем отклика. Я работаю с этой границей — с тем моментом, когда материал начинает отвечать." },
-  { author: "Анастасия Кайнеанунг", text: "Античность для меня — не прошлое. Это незакрытый вопрос. Я возвращаюсь к архетипическим образам, потому что они ещё не дали ответа." },
-  { author: "Лиана Фролова", text: "Граница между реальным и воображаемым — это не место, это состояние. В нём я существую как художник." },
-  { author: "Ева Кан", text: "Архитектура говорит до того, как в неё войдут люди. Я исследую этот момент — пространство как высказывание, предшествующее присутствию." },
-  { author: "Юлия Назар", text: "Абстрактные работы фиксируют следы — остаточные проявления света, времени, погоды и внутренних состояний." },
-  { author: "Елена Назарова", text: "Улица — это текст без автора. Я читаю его через объектив." },
-  { author: "Елена Асеева", text: "Я пишу стихи, потом беру квинтэссенцию из текста, погружаюсь в растительное состояние и рисую не мысль — а энергию. Больше чем мысль. Анти-мысль." },
-  { author: "Лео Лев", text: "Органная музыка существует в пространстве так же, как скульптура. Она занимает объём, давит и освобождает. Звук — это тоже язык до слова." },
-  { author: "Ирина Моторина", text: "В своих проектах я размышляю о месте человека в глобальной экосистеме — о том, как личное и вселенское существуют в одном пространстве восприятия." },
-  { author: "Олеся Яценко", text: "«Фрагменты восприятия» — мой диалог с классическим натюрмортом. Я не копирую предметы, а собираю их заново — через грани, плоскости, вспышки оранжевого." },
-  { author: "Олеся Яценко", text: "Живопись может быть не зеркалом, а призмой. Она учит видеть привычное иначе — дробным, подвижным, живым." },
-  { author: "Александра Гордеева", text: "Абсолютная идея, воплощаясь в творениях художника в виде формы, передаётся от человека человечеству." },
-  { author: "Александра Гордеева", text: "Задача зрителя — за формой увидеть истинный замысел и послание от Творца." }
-];
-function showMainQuote() {
-  const q = mainQuotes[Math.floor(Math.random() * mainQuotes.length)];
-  document.getElementById('main-quote-text').textContent = '«' + q.text + '»';
-  document.getElementById('main-quote-author').textContent = '— ' + q.author;
-}
-showMainQuote();
-</script>
 
 <!-- WORKS -->
 <section class="works-section" id="works" aria-label="Избранные работы художников">
