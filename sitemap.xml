@@ -1,27 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://nazarovbruni.github.io/yazyk-do-slova/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/og-image.jpg</image:loc>
+      <image:title>Язык до слова — Виртуальная выставка Галерея Глубина</image:title>
+      <image:caption>Виртуальная выставка «Язык до слова» — 16 художников арт-сообщества Глубина. Москва, июнь 2026.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-lev-rabota.jpg</image:loc>
+      <image:title>Лео Лев — «Мелодия для органа». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-usoltseva-rabota.jpg</image:loc>
+      <image:title>Екатерина Ус(ольцева) — «Протокол появления». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-bakanova-rabota.jpg</image:loc>
+      <image:title>Лиля Баканова — «Облако действия». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-gordeeva-rabota.jpg</image:loc>
+      <image:title>Александра Гордеева — «Проводник». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-demina-rabota.jpg</image:loc>
+      <image:title>Светлана Дёмина — «Я здесь». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-glazatov-rabota.jpg</image:loc>
+      <image:title>Павел Глазатов — «Согласованное нарушение». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-nazarov-bruni.jpg</image:loc>
+      <image:title>Олег Назаров Бруни — куратор. Галерея Глубина</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://nazarovbruni.github.io/yazyk-do-slova/zal-01.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-usoltseva-rabota.jpg</image:loc>
+      <image:title>Екатерина Ус(ольцева) — «Протокол появления». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-belova-rabota.jpg</image:loc>
+      <image:title>Надежда Белова — «Несовпадение». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-motorina-rabota.jpg</image:loc>
+      <image:title>Ирина Моторина — «Часть системы». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-aseeva-rabota.jpg</image:loc>
+      <image:title>Елена Асеева — «До мысли». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-bakanova-rabota.jpg</image:loc>
+      <image:title>Лиля Баканова — «Облако действия». Галерея Глубина</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://nazarovbruni.github.io/yazyk-do-slova/zal-02.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-demina-rabota.jpg</image:loc>
+      <image:title>Светлана Дёмина — «Я здесь». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-kayneanung-rabota.jpg</image:loc>
+      <image:title>Анастасия Кайнеанунг — «Аллегория прошлого». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-nazar-rabota.jpg</image:loc>
+      <image:title>Юлия Назар. Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-barinova-rabota.jpg</image:loc>
+      <image:title>Татьяна Баринова — «Формула зверя». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-lev-rabota.jpg</image:loc>
+      <image:title>Лео Лев — «Мелодия для органа». Галерея Глубина</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://nazarovbruni.github.io/yazyk-do-slova/zal-03.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-glazatov-rabota.jpg</image:loc>
+      <image:title>Павел Глазатов — «Согласованное нарушение». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-kan-rabota.jpg</image:loc>
+      <image:title>Ева Кан — «Каменный коллаб Пирамидон». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-frolova-rabota.jpg</image:loc>
+      <image:title>Лиана Фролова — «Ce n'est pas un serpent». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-nazarova-rabota.jpg</image:loc>
+      <image:title>Елена Назарова — «Подводное плетение». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-gordeeva-rabota.jpg</image:loc>
+      <image:title>Александра Гордеева — «Проводник». Галерея Глубина</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nazarovbruni.github.io/yazyk-do-slova/images/glubina-yatsenko-rabota.jpg</image:loc>
+      <image:title>Олеся Яценко — «Собрание тишины». Галерея Глубина</image:title>
+    </image:image>
   </url>
 </urlset>
