@@ -111,8 +111,6 @@ footer a{color:var(--mid);text-decoration:none;}
 
 
 @media(max-width:600px){
-  .contacts-mobile-grid { grid-template-columns: 1fr !important; }
-  .contacts-mobile-grid > div { border-right: none !important; border-bottom: 1px solid var(--border); }
 }
 </style>
 
@@ -280,6 +278,10 @@ showRandomQuote();
 </div>
 
 <style>
+.section-header{display:flex;align-items:baseline;justify-content:space-between;padding:32px 56px;border-bottom:1px solid var(--border);}
+.section-header h2{font-size:15px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;margin:0;}
+.section-header span{font-size:14px;color:var(--mid);white-space:nowrap;}
+@media (max-width:768px){.section-header{padding:20px;flex-wrap:wrap;gap:4px;}}
 .contacts-strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--border);}
 .contact-cell{padding:36px 40px;border-right:1px solid var(--border);background:var(--white);}
 .contact-cell:last-child{border-right:none;}
