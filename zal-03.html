@@ -1,5 +1,335 @@
-{
-  "message": "Bad credentials",
-  "documentation_url": "https://docs.github.com/rest",
-  "status": "401"
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110113875', 'ym');
+    ym(110113875, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110113875" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<meta charset="UTF-8">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="description" content="Зал 03 выставки «Язык до слова». Павел Глазатов, Ева Кан, Лиана Фролова, Елена Назарова. Скульптура, живопись, фотография. Арт-сообщество Глубина.">
+  <meta name="author" content="Олег Назаров Бруни">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Зал 03 · Материя — Язык до слова · Глубина">
+  <meta property="og:description" content="Зал 03 выставки «Язык до слова». Павел Глазатов, Ева Кан, Лиана Фролова, Елена Назарова. Скульптура, живопись, фотография. Арт-сообщество Глубина.">
+  <meta property="og:url" content="https://glubina.art/zal-03.html">
+  <meta property="og:image" content="https://nazarovbruni.github.io/yazyk-do-slova/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://nazarovbruni.github.io/yazyk-do-slova/og-image.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ExhibitionEvent","name":"Зал 03 · Материя — Язык до слова · Глубина","isPartOf":{"@type":"ExhibitionEvent","name":"Язык до слова"}}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Зал 03 · Материя — Язык до слова · Глубина</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root { --black:#000; --white:#fff; --gray:#f2f2f0; --mid:#888; --border:#e0e0dc; --sans:'DM Sans',Helvetica,Arial,sans-serif; --serif:'DM Serif Display',Georgia,serif; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--black);font-family:var(--sans);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:stretch;height:52px;background:var(--white);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;padding:0 24px;font-size:15px;font-weight:500;color:var(--black);text-decoration:none;border-right:1px solid var(--border);white-space:nowrap;}
+.nav-back{display:flex;align-items:center;padding:0 24px;font-size:14px;color:var(--mid);text-decoration:none;border-right:1px solid var(--border);transition:background .15s;}
+.nav-back:hover{background:var(--gray);}
+.nav-right{display:flex;align-items:center;padding:0 24px;font-size:14px;color:var(--mid);border-left:1px solid var(--border);margin-left:auto;white-space:nowrap;}
+
+.zal-hero{margin-top:52px;padding:56px 56px 48px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;}
+.zal-num{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:16px;}
+.zal-title{font-family:var(--serif);font-size:clamp(3rem,6vw,6rem);font-weight:400;line-height:.95;letter-spacing:-.02em;}
+.zal-title em{font-style:italic;}
+.zal-desc{font-size:17px;font-weight:300;line-height:1.75;color:#444;max-width:480px;}
+.zal-artists-strip{display:flex;flex-direction:column;gap:6px;margin-top:20px;padding-top:20px;border-top:1px solid var(--border);}
+.zal-artist-row{font-size:15px;display:flex;align-items:baseline;gap:10px;}
+.zal-artist-name{font-weight:500;}
+.zal-artist-med{font-size:11px;color:var(--mid);letter-spacing:.04em;}
+
+.works-header{display:flex;align-items:baseline;justify-content:space-between;padding:32px 56px;border-bottom:1px solid var(--border);}
+.works-header h2{font-size:15px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;}
+.works-header span{font-size:14px;color:var(--mid);}
+
+.works-grid{display:grid;grid-template-columns:repeat(3,1fr);}
+.work-card{border-right:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;flex-direction:column;}
+.work-card:nth-child(3n){border-right:none;}
+.work-image{aspect-ratio:4/5;background:var(--gray);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);}
+.work-image img{width:100%;height:100%;object-fit:cover;display:block;}
+.work-ph{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);text-align:center;line-height:2;padding:20px;}
+.work-info{padding:20px 20px 28px;}
+.work-author{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;}
+.work-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;margin-bottom:8px;line-height:1.2;}
+.work-medium{font-size:11px;color:var(--mid);letter-spacing:.04em;margin-bottom:10px;}
+.work-desc{font-size:15px;font-weight:300;line-height:1.65;color:#444;}
+
+footer{display:flex;align-items:center;justify-content:space-between;padding:20px 56px;border-top:1px solid var(--border);font-size:11px;color:var(--mid);}
+footer a{color:var(--mid);text-decoration:none;}
+
+@media(max-width:900px){
+  .zal-hero{grid-template-columns:1fr;padding:40px 24px 32px;}
+  .works-header{padding:24px;}
+  .works-grid{grid-template-columns:1fr 1fr;}
+  .work-card:nth-child(3n){border-right:1px solid var(--border);}
+  .work-card:nth-child(2n){border-right:none;}
+  footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}
 }
+
+.nav-center { flex:1; display:flex; align-items:center; }
+.nav-link { display:flex; align-items:center; height:100%; padding:0 18px; font-size:11px; font-weight:400; letter-spacing:.06em; color:var(--black); text-decoration:none; border-right:1px solid var(--border); transition:background .15s; }
+.nav-link:first-child { border-left:1px solid var(--border); }
+.nav-link:hover { background:var(--gray); }
+.nav-link.active { background:var(--black); color:var(--white); }
+
+
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; width: 100%; }
+  nav { height: auto; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; width: 100%; }
+  nav::-webkit-scrollbar { display: none; }
+  .nav-logo { flex-shrink: 0; font-size: 12px; padding: 0 14px; height: 44px; }
+  .nav-back { flex-shrink: 0; font-size: 11px; padding: 0 12px; height: 44px; }
+  .nav-center { flex-shrink: 0; display: flex; }
+  .nav-link { flex-shrink: 0; font-size: 10px; padding: 0 10px; height: 44px; white-space: nowrap; }
+  .nav-link:first-child { border-left: none; }
+  .nav-right { display: none; }
+  .zal-hero { grid-template-columns: 1fr !important; padding: 24px 20px !important; gap: 24px !important; }
+  .zal-title { font-size: 2.8rem !important; }
+  .works-header { padding: 16px 20px !important; }
+  .works-grid { grid-template-columns: 1fr 1fr !important; }
+  .work-card:nth-child(2n) { border-right: none !important; }
+  #quote-block { grid-template-columns: 1fr !important; padding: 32px 20px !important; gap: 20px !important; }
+}
+
+
+@media(max-width:600px){
+  .contacts-mobile-grid { grid-template-columns: 1fr !important; }
+  .contacts-mobile-grid > div { border-right: none !important; border-bottom: 1px solid var(--border); }
+}
+</style>
+
+
+<style>
+</style>
+
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img loading="lazy" decoding="async" src="data:image/png;base64,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" alt="Глубина" style="height:28px;width:auto;display:block;"></a>
+  <a href="index.html" class="nav-back">&larr; Язык до слова</a>
+  <div class="nav-center"><a href="zal-01.html" class="nav-link">Зал 01 · Ритуал</a><a href="zal-02.html" class="nav-link">Зал 02 · Миф</a><a href="zal-03.html" class="nav-link active">Зал 03 · Материя</a></div>
+  <div class="nav-right">Виртуальная выставка · Июнь 2026</div>
+</nav>
+
+<div class="zal-hero">
+  <div>
+    <div class="zal-num">Зал 03 &mdash; Язык до слова</div>
+    <h1 class="zal-title"><em>Материя</em></h1>
+  </div>
+  <div>
+    <p class="zal-desc">Смысл рождается через вещество. Скульптура, объект, фактура, след процесса — форма предшествует смыслу. Третий зал о том, как материал говорит сам за себя.</p>
+    <p class="zal-desc" style="margin-top:20px;font-size:15px;color:var(--mid);border-left:2px solid var(--black);padding-left:18px;">У ИИ нет рук и нет материала — только свет на экране. Когда вещество художника проходит через это безтелесное зрение, фактура превращается в иллюзию фактуры. Эта трещина между весом и видимостью — и есть третий перевод.</p>
+    <div class="zal-artists-strip">
+      <div class="zal-artist-row"><span class="zal-artist-name">Павел Глазатов</span><span class="zal-artist-med">&mdash; объект, инсталляция</span></div><div class="zal-artist-row"><span class="zal-artist-name">Ева Кан</span><span class="zal-artist-med">&mdash; инсталляция</span></div><div class="zal-artist-row"><span class="zal-artist-name">Лиана Фролова</span><span class="zal-artist-med">&mdash; живопись, графика</span></div><div class="zal-artist-row"><span class="zal-artist-name">Елена Назарова</span><span class="zal-artist-med">&mdash; видео-арт, фотография</span></div><div class="zal-artist-row"><span class="zal-artist-name">Александра Гордеева</span><span class="zal-artist-med">&mdash; живопись</span></div><div class="zal-artist-row"><span class="zal-artist-name">Олеся Яценко</span><span class="zal-artist-med">&mdash; графика, объект</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="works-header">
+  <h2>Работы</h2>
+  <span>Зал 03 · 6 художников</span>
+</div>
+<div class="works-grid">
+  <div class="work-card">
+    <div class="work-image">
+      <img loading="lazy" decoding="async" src="images/glubina-glazatov-rabota.jpg" alt="Павел Глазатов — Согласованное нарушение" style="width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;" onclick="openLightbox(this.src, 'Павел Глазатов — Согласованное нарушение')">
+    </div>
+    <div class="work-info">
+      <div class="work-author">Павел Глазатов</div>
+      <div class="work-title">«Согласованное нарушение»</div>
+      <div class="work-medium">AI-генерация на основе реальных работ + цитата художника · фотомонтаж</div>
+      <p class="work-desc">«Хаос и порядок — не противоположности. Это два состояния одной и той же системы, наблюдаемой в разное время.»</p>
+    </div>
+  </div>
+  <div class="work-card">
+    <div class="work-image">
+      <img loading="lazy" decoding="async" src="images/glubina-kan-rabota.jpg" alt="Ева Кан — Каменный коллаб Пирамидон" style="width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;" onclick="openLightbox(this.src, 'Ева Кан — Каменный коллаб Пирамидон')">
+    </div>
+    <div class="work-info">
+      <div class="work-author">Ева Кан</div>
+      <div class="work-title">«Каменный коллаб Пирамидон»</div>
+      <div class="work-medium">AI-генерация на основе реальных работ + цитата художника · фотомонтаж</div>
+      <p class="work-desc">«Архитектура говорит до того, как в неё войдут люди. Я исследую этот момент — пространство до присутствия.»</p>
+    </div>
+  </div>
+  <div class="work-card">
+    <div class="work-image">
+      <img loading="lazy" decoding="async" src="images/glubina-frolova-rabota.jpg" alt="Лиана Фролова — Ce n'est pas un serpent" style="width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;" onclick="openLightbox(this.src, 'Лиана Фролова — Ce n\'est pas un serpent')">
+    </div>
+    <div class="work-info">
+      <div class="work-author">Лиана Фролова</div>
+      <div class="work-title">«Ce n'est pas un serpent»</div>
+      <div class="work-medium">AI-генерация на основе реальных работ + цитата художника · фотомонтаж</div>
+      <p class="work-desc">«Путешествуя сквозь сдвиги реальности, открываешь новые способы видеть.»</p>
+    </div>
+  </div>  <div class="work-card">
+    <div class="work-image">
+      <img loading="lazy" decoding="async" src="images/glubina-nazarova-rabota.jpg" alt="Елена Назарова — Подводное плетение" style="width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;" onclick="openLightbox(this.src, 'Елена Назарова — Подводное плетение')">
+    </div>
+    <div class="work-info">
+      <div class="work-author">Елена Назарова</div>
+      <div class="work-title">«Подводное плетение»</div>
+      <div class="work-medium">AI-генерация на основе реальных работ + цитата художника · фотомонтаж</div>
+      <p class="work-desc">«Нить для меня — не только материал, но и метафора связей, которые пронизывают человека, природу и пространство.»</p>
+    </div>
+  </div>
+  <div class="work-card">
+    <div class="work-image">
+      <img loading="lazy" decoding="async" src="images/glubina-gordeeva-rabota.jpg" alt="Александра Гордеева — Проводник" style="width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;" onclick="openLightbox(this.src, 'Александра Гордеева — Проводник')">
+    </div>
+    <div class="work-info">
+      <div class="work-author">Александра Гордеева</div>
+      <div class="work-title">«Проводник»</div>
+      <div class="work-medium">AI-генерация на основе реальных работ + цитата художника · фотомонтаж</div>
+      <p class="work-desc">«Абсолютная идея, воплощаясь в творениях художника, передаётся от человека человечеству. Задача зрителя — увидеть за формой замысел Творца.»</p>
+    </div>
+  </div>
+  <div class="work-card">
+    <div class="work-image">
+      <img loading="lazy" decoding="async" src="images/glubina-yatsenko-rabota.jpg" alt="Олеся Яценко — Собрание тишины" style="width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;" onclick="openLightbox(this.src, 'Олеся Яценко — Собрание тишины')">
+    </div>
+    <div class="work-info">
+      <div class="work-author">Олеся Яценко</div>
+      <div class="work-title">«Собрание тишины»</div>
+      <div class="work-medium">AI-генерация на основе реальных работ + цитата художника · фотомонтаж</div>
+      <p class="work-desc">«Фрагменты восприятия» — мой диалог с классическим натюрмортом. Я не копирую предметы, а собираю их заново через грани и плоскости.»</p>
+    </div>
+  </div>
+</div>
+
+<div id="quote-block" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px;display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:center;background:var(--white);">
+  <div>
+    <button onclick="showRandomQuote()" style="font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);background:none;border:none;border-bottom:1px solid var(--border);padding-bottom:2px;cursor:pointer;margin-bottom:20px;display:block;white-space:nowrap;">Другая цитата</button>
+    <div style="font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--mid);text-transform:uppercase;margin-bottom:8px;white-space:nowrap;">Прямая речь</div>
+    <p style="font-size:14px;font-weight:500;line-height:1.6;color:var(--black);margin-bottom:16px;">Именно эти слова художников куратор передал искусственному интеллекту — и ИИ создал по ним изображения для выставки.</p>
+    <div style="font-family:var(--serif);font-size:clamp(3rem,5vw,5rem);font-weight:400;line-height:1;color:var(--gray);letter-spacing:-.02em;">&ldquo;&rdquo;</div>
+  </div>
+  <div>
+    <p id="quote-text" style="font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.7rem);font-weight:400;font-style:italic;line-height:1.55;color:var(--black);margin-bottom:24px;"></p>
+    <div id="quote-author" style="font-size:17px;font-weight:600;letter-spacing:.04em;color:var(--black);padding-top:14px;border-top:2px solid var(--black);display:inline-block;"></div>
+  </div>
+</div>
+<script>
+
+const quotes = [
+  { author: "Павел Глазатов", text: "Хаос и порядок — не противоположности. Это два состояния одной и той же системы, наблюдаемой в разное время." },
+  { author: "Ева Кан", text: "Архитектура говорит до того, как в неё войдут люди. Я исследую этот момент — пространство до присутствия." },
+  { author: "Лиана Фролова", text: "Путешествуя сквозь сдвиги реальности, открываешь новые способы видеть." },
+  { author: "Елена Назарова", text: "Нить для меня — не только материал, но и метафора связей, которые пронизывают человека, природу и пространство." },
+  { author: "Олеся Яценко", text: "«Фрагменты восприятия» — мой диалог с классическим натюрмортом. Я не копирую предметы, а собираю их заново через грани и плоскости." },
+  { author: "Александра Гордеева", text: "Абсолютная идея, воплощаясь в творениях художника, передаётся от человека человечеству. Задача зрителя — увидеть за формой замысел Творца." }
+];
+
+let quoteIndex = Math.floor(Math.random() * quotes.length);
+function showRandomQuote() {
+  const q = quotes[quoteIndex];
+  document.getElementById('quote-text').textContent = '«' + q.text + '»';
+  document.getElementById('quote-author').textContent = '— ' + q.author;
+  quoteIndex = (quoteIndex + 1) % quotes.length;
+}
+showRandomQuote();
+
+</script>
+
+
+<div style="display:grid;grid-template-columns:1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border);width:100%;">
+  <div style="padding:64px 56px;border-right:1px solid var(--border);">
+    <div style="font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--mid);text-transform:uppercase;margin-bottom:2rem;">О выставке</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;line-height:1.1;margin-bottom:1.5rem;">Язык<br>до <em>слова</em></h2>
+    <p style="font-size:16px;font-weight:300;line-height:1.8;color:#444;margin-bottom:2rem;">До того как возникло слово — был жест, линия, след руки в глине, знак на камне. Этот язык не исчез. Он живёт в каждом произведении, которое нельзя пересказать.</p>
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--black);text-decoration:none;padding-bottom:2px;border-bottom:1px solid var(--black);">На главную страницу выставки &rarr;</a>
+  </div>
+  <div style="padding:64px 56px;background:var(--gray);display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="padding-left:32px;">
+      <div style="font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--mid);text-transform:uppercase;margin-bottom:1.5rem;">Залы выставки</div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <a href="zal-01.html" style="font-size:17px;font-weight:300;font-family:var(--serif);color:var(--black);text-decoration:none;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:10px;">
+          <span>Зал 01 · <em>Ритуал</em></span><span style="font-size:18px;color:var(--black);font-weight:500;">→</span>
+        </a>
+        <a href="zal-02.html" style="font-size:17px;font-weight:300;font-family:var(--serif);color:var(--black);text-decoration:none;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:10px;">
+          <span>Зал 02 · <em>Миф</em></span><span style="font-size:18px;color:var(--black);font-weight:500;">→</span>
+        </a>
+        <a href="zal-03.html" style="font-size:17px;font-weight:300;font-family:var(--serif);color:var(--black);text-decoration:none;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:10px;">
+          <span>Зал 03 · <em>Материя</em></span><span style="font-size:18px;color:var(--black);font-weight:500;">→</span>
+        </a>
+      </div>
+    </div>
+    <div style="margin-top:2rem;">
+      <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;">16 резидентов Глубины</div>
+      <div style="font-size:11px;color:var(--mid);">Глубина · Москва · Июнь 2026</div>
+    </div>
+  </div>
+</div>
+
+<div style="background:var(--gray);border-top:1px solid var(--border);width:100%;box-sizing:border-box;">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:6px;">
+    <h2 style="font-size:15px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;margin:0;">Контакты для резидентов, галерей и коллекционеров</h2>
+    <span style="font-size:14px;color:var(--mid);white-space:nowrap;margin-left:2rem;">Глубина · Москва · Июнь 2026</span>
+  </div>
+  <div class="contacts-mobile-grid" style="display:grid;grid-template-columns:repeat(2,1fr);background:var(--white);width:100%;">
+    <div style="padding:16px 16px 16px 88px;border-right:1px solid var(--border);word-break:break-word;min-width:0;">
+      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;">Адрес</div>
+      <div style="font-size:15px;line-height:1.8;">Москва, Фрунзенская набережная, д. 46<br>3-й подъезд</div>
+    </div>
+    <div style="padding:16px 16px 16px 88px;border-right:1px solid var(--border);word-break:break-word;min-width:0;">
+      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;">Стать резидентом</div>
+      <div style="font-size:15px;line-height:1.8;">Глубина открыта для новых резидентов.<br>Портфолио на <a href="mailto:gallery@glubinagallery.ru" style="color:var(--black);">gallery@glubinagallery.ru</a></div>
+    </div>
+    <div style="padding:16px 16px 16px 88px;border-right:1px solid var(--border);word-break:break-word;min-width:0;">
+      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;">Приобретение работ</div>
+      <div style="font-size:15px;line-height:1.8;"><a href="mailto:nazarov.bruni@gmail.com" style="color:var(--black);">nazarov.bruni@gmail.com</a><br><a href="https://t.me/NazarovBruni" target="_blank" style="color:var(--black);">@NazarovBruni</a></div>
+    </div>
+    <div style="padding:16px 16px 16px 88px;word-break:break-word;min-width:0;">
+      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;">Соцсети</div>
+      <div style="font-size:15px;line-height:1.8;"><a href="https://t.me/galleryglubina" target="_blank" style="color:var(--black);">Telegram</a><br><a href="https://vk.com/club212774474" target="_blank" style="color:var(--black);">ВКонтакте</a></div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 56px;background:var(--gray);border-top:1px solid var(--border);flex-wrap:wrap;gap:6px;">
+    <span style="font-size:11px;color:var(--mid);">&copy; 2026 Арт-сообщество Глубина &mdash; Концепция выставки: <a href="https://t.me/NazarovBruni" target="_blank" style="color:var(--mid);">Олег Назаров Бруни</a></span>
+    <a href="http://galleryglubina.ru" target="_blank" style="font-size:11px;color:var(--mid);text-decoration:none;">galleryglubina.ru</a>
+    <span style="font-size:10px;color:#bbb;display:block;margin-top:6px;width:100%;">Использование материалов разрешено только с предварительного согласия. Все права на картинки и тексты принадлежат их авторам.</span>
+    <span style="font-size:10px;color:#bbb;display:block;margin-top:6px;width:100%;">Использование материалов разрешено только с предварительного согласия. Все права на картинки и тексты принадлежат их авторам.</span>
+  </div>
+</div>
+
+
+<div id="lightbox-overlay" onclick="closeLightbox(event)" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;">
+  <button onclick="closeLightbox(event)" style="position:absolute;top:24px;right:24px;background:none;border:none;color:#fff;font-size:32px;line-height:1;cursor:pointer;z-index:10000;font-family:var(--sans);padding:8px;">&times;</button>
+  <img id="lightbox-img" src="" alt="" style="max-width:90vw;max-height:88vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+  <div id="lightbox-caption" style="position:absolute;bottom:24px;left:0;right:0;text-align:center;color:#ccc;font-size:13px;letter-spacing:.04em;font-family:var(--sans);"></div>
+</div>
+<script>
+function openLightbox(src, caption) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-caption').textContent = caption;
+  document.getElementById('lightbox-overlay').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e) {
+  document.getElementById('lightbox-overlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox(e);
+});
+</script>
+</body>
+</html>
